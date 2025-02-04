@@ -1,5 +1,5 @@
 /*
-  # Initial Schema Setup for AI Chatbot
+  Initial Schema Setup for AI Chatbot
 
   1. New Tables
     - `suppliers`
@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS suppliers (
 );
 
 -- Create products table
+
 CREATE TABLE IF NOT EXISTS products (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   supplier_id uuid REFERENCES suppliers(id),
@@ -38,6 +39,7 @@ CREATE TABLE IF NOT EXISTS products (
 );
 
 -- Create chat_history table
+
 CREATE TABLE IF NOT EXISTS chat_history (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id uuid REFERENCES auth.users(id),
@@ -47,11 +49,13 @@ CREATE TABLE IF NOT EXISTS chat_history (
 );
 
 -- Enable Row Level Security
+
 ALTER TABLE suppliers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
 ALTER TABLE chat_history ENABLE ROW LEVEL SECURITY;
 
 -- Create policies
+
 CREATE POLICY "Allow authenticated read access to suppliers"
   ON suppliers FOR SELECT
   TO authenticated
@@ -73,5 +77,6 @@ CREATE POLICY "Users can insert their own chat messages"
   WITH CHECK (auth.uid() = user_id);
 
 -- Create indexes for better performance
+
 CREATE INDEX IF NOT EXISTS idx_products_supplier ON products(supplier_id);
 CREATE INDEX IF NOT EXISTS idx_chat_history_user ON chat_history(user_id);
