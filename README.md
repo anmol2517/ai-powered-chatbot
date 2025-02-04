@@ -1,5 +1,5 @@
-ai-chatbot/
-├── frontend/  # React frontend
+ai-chatbot
+├── frontend  # React frontend
 │   ├── public/  # Static assets
 │   ├── src/  # Source code
 │   │   ├── components/  # Reusable components
