@@ -1,33 +1,31 @@
 ai-chatbot/
-├── frontend/                 # React frontend
-│   ├── public/               # Static assets
-│   ├── src/                  # Source code
-│   │   ├── components/       # Reusable components
+├── frontend/  # React frontend
+│   ├── public/  # Static assets
+│   ├── src/  # Source code
+│   │   ├── components/  # Reusable components
 │   │   │   ├── ChatWindow.jsx
-│   │   │   ├── Message.jsx
-│   │   ├── context/          # Global state management
-│   │   │   ├── ChatContext.js
-│   │   ├── api/              # API integration
-│   │   │   ├── api.js
-│   │   ├── App.js            # Main app component
-│   │   ├── index.js          # Entry point
-│   ├── package.json          # Frontend dependencies
-│
-├── backend/                  # Python backend
+│   │   │   └── Message.jsx
+│   │   ├── context/  # Global state management
+│   │   │   └── ChatContext.js
+│   │   ├── api/  # API integration
+│   │   │   └── api.js
+│   │   ├── App.js  # Main app component
+│   │   └── index.js  # Entry point
+│   └── package.json  # Frontend dependencies
+├── backend/  # Python backend
 │   ├── app/
-│   │   ├── __init__.py       # App initialization
-│   │   ├── models.py         # Database models
-│   │   ├── routes.py         # API routes
-│   │   ├── langgraph_agent.py # AI agent logic
-│   ├── config.py             # Configuration settings
-│   ├── requirements.txt      # Backend dependencies
-│   ├── run.py                # Application entry point
-│
-├── database/                 # Database files
-│   ├── schema.sql            # Database schema
-│   ├── sample_data.sql       # Sample data for testing
-│
-├── README.md                 # Project documentation
+│   │   ├── __init__.py  # App initialization
+│   │   ├── models.py  # Database models
+│   │   ├── routes.py  # API routes
+│   │   └── langgraph_agent.py  # AI agent logic
+│   ├── config.py  # Configuration settings
+│   ├── requirements.txt  # Backend dependencies
+│   └── run.py  # Application entry point
+├── database/  # Database files
+│   ├── schema.sql  # Database schema
+│   └── sample_data.sql  # Sample data for testing
+└── README.md  # Project documentation
+
 
 
 ### Set Up the Database
