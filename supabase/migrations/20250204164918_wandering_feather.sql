@@ -1,5 +1,5 @@
 /*
-  Initial Schema Setup for AI Chatbot
+  ------------Initial Schema Setup for AI Chatbot-------------
 
   1. New Tables
     - `suppliers`
