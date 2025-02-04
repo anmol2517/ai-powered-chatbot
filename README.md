@@ -26,15 +26,6 @@ ai-chatbot/
 │   └── sample_data.sql           // Sample data for testing  
 └── README.md                     // Project documentation  
 
-
-
-
-
-
-
-
-
-
 ### Set Up the Database
 ```
 CREATE DATABASE supplier_db;
