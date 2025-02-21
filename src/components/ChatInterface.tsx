@@ -68,4 +68,5 @@ const ChatInterface: React.FC = () => {
   );
 };
 
+// this function created ai-powered web applications
 export default ChatInterface;
